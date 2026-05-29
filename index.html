@@ -634,6 +634,45 @@
   ::-webkit-scrollbar { width: 4px; height: 4px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+  /* ── RESPONSIVE / MOBILE ── */
+  @media (max-width: 900px) {
+    .header { padding: 20px; align-items: flex-start; gap: 12px; }
+    .profile-chips { justify-content: flex-start; overflow-x: auto; padding-top: 6px; }
+    .stats-bar { grid-template-columns: repeat(3, 1fr); }
+    .main { grid-template-columns: 1fr; }
+    .left-panel { padding: 20px; border-right: none; }
+    .right-panel { padding: 20px; }
+    .nav-tabs { padding: 0 16px; }
+    .week-grid-header, .week-grid-row { grid-template-columns: 80px repeat(7, minmax(120px, 1fr)); }
+    .week-grid { overflow-x: auto; }
+    .meal-card { grid-template-columns: 56px 1fr; }
+    .ring-wrap { width: 96px; height: 96px; }
+    .ring-center .kcal { font-size: 18px; }
+    .macro-bar-label { width: 64px; font-size: 11px; }
+    .macro-bar-val { width: 46px; font-size: 10px; }
+  }
+
+  @media (max-width: 560px) {
+    .header { flex-direction: column; align-items: flex-start; padding: 16px; }
+    .header-left { width: 100%; }
+    .profile-chips { width: 100%; gap: 8px; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); font-size: 13px; }
+    .stat-item { padding: 12px 14px; }
+    .nav-tabs { padding: 0 12px; }
+    .nav-tab { padding: 10px 12px; font-size: 12px; }
+    .left-panel { padding: 16px; }
+    .right-panel { padding: 16px; }
+    .meal-card { display: block; padding-bottom: 12px; }
+    .meal-time-col { flex-direction: row; gap: 8px; align-items: center; padding-top: 8px; }
+    .meal-time-label { font-size: 10px; }
+    .meal-dot { margin-bottom: 0; }
+    .meal-body { padding-left: 0; }
+    .week-grid-header, .week-grid-row { grid-template-columns: 70px repeat(7, minmax(100px, 1fr)); }
+    .week-grid { font-size: 12px; }
+    .footer { flex-direction: column; gap: 8px; align-items: flex-start; padding: 12px 16px; }
+    .daily-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
